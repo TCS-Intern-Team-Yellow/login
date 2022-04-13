@@ -9,6 +9,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/login/user")
 public class LoginController {
 
