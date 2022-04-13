@@ -12,7 +12,7 @@ import java.util.Optional;
 @RequestMapping("/login/user")
 public class LoginController {
 
-    @Autowired
+    @Autowired //we only declare, Autowired will help in automatically initiating it
     private UserRepo userRepo;
 
     @PostMapping("/signup")

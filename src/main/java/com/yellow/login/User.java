@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+@Entity //Tells that this is a SQL table
 public class User {
 
     public static final char SEX_MALE = 'm';
@@ -14,7 +14,7 @@ public class User {
     public static final String USER_TYPE_ADMIN = "admin";
     public static final String USER_TYPE_USER = "user";
 
-    @Id
+    @Id //The primary key of SQL table
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String userId;
