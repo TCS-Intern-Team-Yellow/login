@@ -17,16 +17,16 @@ public class User {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    String userId;
+    private String userId;
 
-    String firstName, lastName;
-    int age;
-    char sex;
-    String address;
-    String emailId;
-    Long phoneNumber;
-    String userType;
-    String password;
+    private String firstName, lastName;
+    private int age;
+    private char sex;
+    private String address;
+    private String emailId;
+    private Long phoneNumber;
+    private String userType;
+    private String password;
 
     public String getUserId() {
         return userId;
@@ -107,4 +107,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
