@@ -6,4 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 // CRUD refers Create, Read, Update, Delete
 //The two parameters are <Object Data Type, Primary Key Data Type>
 public interface UserRepo extends CrudRepository<User,String> {
+	User findByEmailId(String emailId);
 }
