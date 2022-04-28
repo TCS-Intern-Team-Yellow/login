@@ -8,7 +8,5 @@ import org.springframework.data.repository.CrudRepository;
 //The two parameters are <Object Data Type, Primary Key Data Type>
 public interface LoginRepo extends CrudRepository<User,String> {
 	
-//	@Query("SELECT CASE WHEN COUNT(c) > 0 THEN true ELSE false END FROM User p WHERE p.email_id = :email and p.password = :password")
-//    boolean authentication(String username,String password);
 	User findByEmailId(String emailId);
 }

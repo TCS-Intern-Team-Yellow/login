@@ -22,6 +22,17 @@ public class LoginController {
         user.setPassword(this.digest(user.getPassword().getBytes(StandardCharsets.UTF_8)));
         return userRepo.save(user);
     }
+    
+    @PostMapping("/login")
+    public User login(@RequestBody User user) throws NoSuchAlgorithmException {
+    	user.setPassword(this.digest(user.getPassword().getBytes(StandardCharsets.UTF_8)));
+    	User u=userRepo.findByEmailId(user.getEmailId());
+    	if(u!=null && u.getPassword().equals(user.getPassword())) {
+    		return u;
+    	}else {
+    		return user;
+    	}
+    }
 
     @GetMapping("/userid/{userId}")
     public Optional<User> getUserDetails(@PathVariable String userId) {
