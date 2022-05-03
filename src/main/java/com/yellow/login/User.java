@@ -2,6 +2,7 @@ package com.yellow.login;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,6 +24,7 @@ public class User {
     private int age;
     private char sex;
     private String address;
+    @Column(unique=true)
     private String emailId;
     private Long phoneNumber;
     private String userType;
