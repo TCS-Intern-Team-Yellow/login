@@ -5,6 +5,6 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/shopper
-    username: root
-    password: root
+    url: jdbc:mysql://shopperdb.c4biysdam7a3.us-east-1.rds.amazonaws.com:3306/shopperdb
+    username: tcsyellow
+    password: tcsyellow
