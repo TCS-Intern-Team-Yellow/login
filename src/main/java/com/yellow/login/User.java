@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @Entity //Tells that this is a SQL table
 public class User {
 
-    //Test comment
+    //Test comment 2
     public static final char SEX_MALE = 'm';
     public static final char SEX_FEMALE = 'f';
     public static final String USER_TYPE_ADMIN = "admin";
